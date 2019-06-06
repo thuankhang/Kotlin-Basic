@@ -2,20 +2,20 @@ import java.util.*
 
 fun main() {
     val scanner  = Scanner(System.`in`)
-    println("Số a là : ")
+    println("Input number a : ")
     val a=scanner.nextInt()
-    println("Số b là : ")
+    println("Input number b : ")
     val b=scanner.nextInt()
-    var ucscln=1
+    var The_largest_common_divisor =1
     var min=if (a>b) b else a
     for (i in min downTo 1)
     {
         if(a%i==0 && b%i==0)
         {
-            ucscln=i
+            The_largest_common_divisor=i
             break
         }
     }
-    println("USCL của $a và $b (a và b) = $ucscln")
+    println("The greatest common divisor of $a and $b = $The_largest_common_divisor")
 
 }

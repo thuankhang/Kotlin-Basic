@@ -1,35 +1,36 @@
 import java.util.*
 
 fun main(args: Array<String>) {
-    nhap()
+    Input()
 }
 
-internal fun nhap() {
-    val n: Int
-    val b: Int
+internal fun Input() {
+    val number1: Int
+    val number2: Int
     val sc = Scanner(System.`in`)
-    print("nhập số tự nhiên n và hệ cơ số b: ")
-    n = sc.nextInt()
-    b = sc.nextInt()
-    val str = chuyen(n, b)
-    print("giá trị $n chuyển từ hệ 10 sang hệ $b là: ")
-    xuat(str)
+    print("Input the Natural numbers (number1) : ")
+    number1 = sc.nextInt()
+    print("Input the Base system (number2) : ")
+    number2 = sc.nextInt()
+    val str = Transfer(number1, number2)
+    print("Value $number1 switching from system 10 to system $number2 is: ")
+    Output(str)
 }
 
-internal fun xuat(str: String) {
+internal fun Output(str: String) {
     for (i in 0 until str.length)
         print(str[str.length - i - 1])
     println("")
 }
 
-internal fun chuyen(n: Int, b: Int): String {
-    var n = n
+internal fun Transfer(number1: Int, number2: Int): String {
+    var number = number1
     var str = ""
     var x = 0
-    while (n > 0) {
-        x = n % b
-        n /= b
-        if (b == 16) {
+    while (number > 0) {
+        x = number % number2
+        number /= number2
+        if (number2 == 16) {
             if (x == 10) str += "A"
             if (x == 11) str += "B"
             if (x == 12) str += "C"

@@ -1,19 +1,19 @@
 fun main(args: Array<String>) {
-    var n:Int=0
+    var number:Int=0
     var s:String?
-    println("Nhập số n:")
+    println("Input number :")
     s= readLine()
     if(s!=null)
-        n=s.toInt()
-    var dem:Int=0
-    for(i in 1..n) {
-        if(n%i==0)
-            dem++
+        number=s.toInt()
+    var count:Int=0
+    for(i in 1..number) {
+        if(number%i==0)
+            count++
     }
-    if(dem==2)
-            println("$n là số nguyên tố")
+    if(count==2)
+            println("$number is a prime number ")
     else
-            println("$n ko phải là số nguyên tố")
+            println("$number isn't a prime number")
 
 
 

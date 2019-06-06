@@ -1,23 +1,21 @@
-package Bài8
-
 import java.util.ArrayList
 
 var DEC_10 = 10
 
 fun main(args: Array<String>) {
     var count = 0
-    // in ra màn hình các số thuận nghịch có 6 chữ số
+    println("Six-digit reversible numbers are: ")
     for (i in 100000..999999) {
-        if (isThuanNghich(i)) {
+        if (isReversible(i)) {
             println(i)
             count++
         }
     }
-    println("Tổng các số thuận nghịch có 6 chữ số: $count")
+    println("There are $count number of reversible have six digits")
 }
 
 
-fun isThuanNghich(n: Int): Boolean {
+fun isReversible (n: Int): Boolean {
     var n = n
     val listNumbers = ArrayList<Int>()
     do {
